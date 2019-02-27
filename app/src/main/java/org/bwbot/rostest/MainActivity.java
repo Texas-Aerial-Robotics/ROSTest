@@ -1,6 +1,5 @@
 package org.bwbot.rostest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import org.ros.android.RosActivity;
@@ -41,7 +40,7 @@ public class MainActivity extends RosActivity {
 
             @Override
             public void onStart(ConnectedNode connectedNode) {
-                final Publisher<std_msgs.String> pub =  connectedNode.newPublisher("/test", String._TYPE);
+                final Publisher<std_msgs.String> pub =  connectedNode.newPublisher("/Android", String._TYPE);
                 connectedNode.executeCancellableLoop(new CancellableLoop() {
                     @Override
                     protected void loop() throws InterruptedException {
